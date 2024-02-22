@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/shrine.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.name{
+    font-size: 90px;
+    line-height: 158px;
+    color:#fff;
+    margin-bottom: 40px;
+}
+
+.occupation{
+    font-size: 40px;
+    line-height: 50px;
+    color: black;
+}
+

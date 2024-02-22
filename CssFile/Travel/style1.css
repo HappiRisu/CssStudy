@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+a:link,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0 17px;
+}
+
+.header__title {
+  font-size: 35px;
+  font-weight: bold;
+  font-family: 'Rubik';
+  color: #444444;
+  text-transform: uppercase;
+}
+
+.nav__list {
+  display: flex;
+}
+
+.nav__list li {
+  font-size: 20px;
+  font-family: 'Bree serif';
+  text-transform: uppercase;
+  margin-right: 18px;
+}
+
+.nav__list li:last-child {
+  margin-right: 0;
+}
+
+.nav__list li.active {
+  color: #ff9907;
+}
+
+.header__btn {
+  width: 40px;
+  border: none;
+  background-color: transparent;
+  display: none;
+  cursor: pointer;
+}
+
+.header__btn span {
+  display: block;
+  height: 5px;
+  margin: 5px 0;
+  background-color: #444444;
+  transition: all 0.5s;
+}
+.header__btn:hover span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.header__btn:hover span:nth-child(2) {
+  transform: scale(0);
+}
+.header__btn:hover span:nth-child(3) {
+  transform: translateY(-13px) rotate(-45deg);
+}
+
+.banner {
+  color: #fff;
+  text-transform: capitalize;
+  font-family: 'Lora';
+  font-weight: bold;
+
+  background: url('./images/banner.png') center center;
+  background-size: cover;
+  min-height: 500px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner h3 {
+  font-size: 27px;
+}
+
+.banner h2 {
+  margin-top: 7px;
+  font-size: 45px;
+}
+
+.banner p {
+  margin-top: 7px;
+  font-size: 22px;
+}
+
+.post {
+  row-gap: 34px;
+  margin-top: 29px;
+}
+
+.post__item {
+  font-family: 'Lora';
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.post__item img {
+  display: block;
+  width: 100%;
+}
+
+.post__item h4 {
+  font-size: 22px;
+  margin: 10px 0 8px;
+}
+
+.post__item p {
+  font-size: 16px;
+  color: #666666;
+}
+
+@media screen and (max-width: 698px) {
+  .banner {
+    height: 350px;
+  }
+  .banner h3 {
+    font-size: 18px;
+  }
+
+  .banner h2 {
+    font-size: 25px;
+  }
+
+  .banner p {
+    font-size: 16px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .header__btn {
+    display: block;
+  }
+}
