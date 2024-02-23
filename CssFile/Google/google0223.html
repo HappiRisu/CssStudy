@@ -4,6 +4,67 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="./style0223.css" />
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#">Gmail</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">이미지</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__item--icon" href="#">
+              <span class="material-symbols-outlined">more_horiz</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a id="nav__item--badge" href="#">LEE</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="banner">
+      <div class="banner-img">
+        <img src="./images/banner.png" alt="google banner" />
+      </div>
+      <div class="search-form">
+        <form action="#">
+          <div class="search-form__input">
+            <span class="material-symbols-outlined search"> search </span>
+            <span class="material-symbols-outlined keyboard"> keyboard </span>
+            <span class="material-symbols-outlined mic"> mic </span>
+            <input type="text" />
+          </div>
+          <div class="search-form__btn">
+            <button class="search-form__btn--search" type="button">Google 검색</button>
+            <button class="search-form__btn--lucky" type="button">i'm feeling lucky</button>
+          </div>
+        </form>
+      </div>
+      <div class="main-language">Google 제공 서비스: <span class="main-language__english">English</span></div>
+    </section>
+    <footer class="footer">
+      <div class="footer-line">
+        <a href="#">대한민국</a>
+      </div>
+      <div class="footer-line">
+        <div class="footer-line__left">
+          <a href="#">광고</a href="#">
+          <a href="#">비즈니스</a href="#">
+          <a href="#">검색의 원리</a href="#">
+        </div>
+        <div class="footer-line__right">
+          <a href="#">개인정보처리방침</a href="#">
+          <a href="#">약관</a href="#">
+          <a href="#">설정</a href="#">
+        </div>
+      </div>
+    </footer>
+    
+  </body>
 </html>
