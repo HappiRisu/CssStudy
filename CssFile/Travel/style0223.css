@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
 
 * {
   margin: 0;
@@ -20,50 +20,74 @@ li {
 
 /* header */
 .header {
-  grid-column: 1 / -1;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  text-transform: capitalize;
 }
 
-.header .header__title {
+.header h1 {
   color: #444;
   font-size: 35px;
-  font-family: 'Rubik', serif;
-  text-transform: uppercase;
+  font-family: "Rubik", serif;
 }
 
-.header .nav__list {
-  height: 100%;
+.nav__list {
   display: flex;
-  align-items: center;
 }
 
-.header .nav__list .nav__item {
+.nav__item {
   margin-right: 18px;
+
   color: #444;
   font-size: 20px;
-  font-family: 'Bree Serif', serif;
-  text-transform: uppercase;
+  font-family: "Bree Serif";
 }
 
-.header .nav__list .nav__item.active {
+.nav__item.active {
   color: #ff9907;
 }
 
-.header .nav__list .nav__item:last-child {
+.nav__item:last-child {
   margin-right: 0;
 }
 
-.banner {
-  grid-column: 1 / -1;
-  margin: 17px 0 29px;
+.hamburger {
+  display: none;
+  background-color: transparent;
+  border: none;
 }
 
-.banner-bg {
-  background: url('./images/banner.png') no-repeat center center;
-  background-size: cover;
-  height: 100%;
-  min-height: 500px;
+.hamburger span {
+  display: block;
+  width: 40px;
+  height: 5px;
+  margin: 5px 0;
+
+  background-color: #444;
+  transition: all 0.5s ease;
+}
+
+.hamburger:hover span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger:hover span:nth-child(2) {
+  transform: scale(0);
+}
+
+.hamburger:hover span:nth-child(3) {
+  transform: translateY(-13px) rotate(-45deg);
+}
+
+/* banner */
+.banner {
+  margin-top: 17px;
+  margin-bottom: 29px;
+  height: 500px;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
+    url("./images/banner.png");
 
   display: flex;
   flex-direction: column;
@@ -72,35 +96,82 @@ li {
 
   color: #fff;
   text-transform: capitalize;
-  font-family: 'Lora';
+  font-family: "Lora";
+  text-align: center;
 }
 
-.banner-bg h3 {
+.banner h3 {
   font-size: 27px;
 }
 
-.banner-bg h2 {
+.banner h2 {
   font-size: 45px;
   margin: 7px 0;
 }
 
-.banner-bg p {
+.banner p {
   font-size: 22px;
 }
 
-.gallary {
-  grid-column: 1 / -1;
-
-  display: grid;
-  grid-template-columns: (12, 1fr);
-  column-gap: 20px;
+/* gallery */
+.gallery {
+  row-gap: 33px;
 }
 
-.gallary__item {
-  grid-column: span 4;
+.gallery__item {
+  text-align: center;
+  font-family: "Lora";
 }
 
-.gallary__item img {
-  display: block;
+.gallery__item img {
   width: 100%;
+  display: block;
+}
+
+.gallery__item h4 {
+  margin: 7px 0;
+
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 29px;
+}
+
+.gallery__item p {
+  color: #666666;
+  line-height: 21px;
+}
+
+.footer {
+  height: 57px;
+  background-color: #333333;
+  color: #fff;
+  margin-top: 67px;
+  text-align: center;
+  line-height: 57px;
+}
+
+@media screen and (max-width: 698px) {
+  .banner {
+    height: 350px;
+  }
+
+  .banner h3 {
+    font-size: 18px;
+  }
+
+  .banner h2 {
+    font-size: 25px;
+  }
+
+  .banner p {
+    font-size: 16px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
