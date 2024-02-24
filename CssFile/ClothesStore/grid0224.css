@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Sansita+Swashed:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Sansita+Swashed:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 
 * {
   padding: 0;
@@ -22,7 +22,7 @@ body {
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
   display: grid;
@@ -52,123 +52,44 @@ body {
   grid-column: span 3;
 }
 
-/* header */
+@media screen and (max-width: 792px) {
+  .col-md-6 {
+    grid-column: span 6;
+  }
+  .best__item {
+    margin-bottom: 39px;
+  }
 
-.header {
-  background-color: #fff;
+  /* 마지막 3번째 margin-bottom을 없애는 법? */
 }
 
-.header-wrap {
-  text-align: center;
-  padding: 13px 0;
-}
+@media screen and (max-width: 574px) {
+  .col-sm-12 {
+    grid-column: 1 / -1;
+  }
 
-.header__logo {
-  font-size: 36px;
-  font-weight: bold;
-  font-family: 'sansita swashed';
-}
+  .banner__img,
+  .banner__txt {
+    height: 400px;
+  }
 
-/* banner */
-.banner__img img {
-  width: 100%;
-  display: block;
-}
+  .footer .footer-container {
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: 1fr;
+  }
 
-.banner__txt {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  .footer > div > div {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  .phone,
+  .faq,
+  .my-order {
+    height: 100px;
+  }
 
-  padding: 0 111px;
-
-  color: #fff;
-  font-family: 'Roboto', serif;
-  text-align: center;
-}
-
-.banner__txt.women {
-  background-color: #b5838d;
-}
-
-.banner__txt.men {
-  background-color: #6d6875;
-}
-
-.banner__txt--gender {
-  font-size: 24px;
-  font-weight: normal;
-  text-transform: uppercase;
-
-  margin-bottom: 63px;
-}
-
-/* best-item */
-.best__title {
-  font-weight: 500;
-  text-align: center;
-  margin: 39px 0;
-  font-family: 'Roboto', sans-serif;
-}
-
-.best__item {
-  font-family: 'Poppins', sans-serif;
-}
-
-.best__item a img {
-  display: block;
-  width: 100%;
-  margin-bottom: 16px;
-}
-
-.best__item a h3 {
-  font-size: 18px;
-  font-weight: 500;
-}
-
-.best__item a p {
-  font-size: 14px;
-  margin: 8px 0;
-}
-
-.best__item a strong {
-  color: #b5838d;
-  font-size: 18px;
-}
-
-.best-button {
-  margin: 56px 0 80px;
-  text-align: center;
-}
-
-.best-button button {
-  color: #fff;
-  font-size: 18px;
-  text-transform: capitalize;
-  font-family: 'Poppins', sans-serif;
-  white-space: nowrap;
-  background-color: #000;
-  border-radius: 25px;
-
-  padding: 10px 32px;
-}
-
-/* new-arrival */
-
-.new-arrival-button {
-  margin: 56px 0 80px;
-  text-align: center;
-}
-
-.new-arrival-button button {
-  color: #000;
-  font-size: 18px;
-  text-transform: capitalize;
-  font-family: 'Poppins', sans-serif;
-  white-space: nowrap;
-  background-color: #fff;
-  border-radius: 25px;
-
-  padding: 10px 32px;
+  .sns,
+  .copyright {
+    height: 50px;
+  }
 }
