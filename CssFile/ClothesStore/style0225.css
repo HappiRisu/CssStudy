@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Sansita+Swashed:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Sansita+Swashed:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 
 /* reset */
 * {
@@ -19,25 +19,21 @@ li {
   list-style-type: none;
 }
 
-/* container */
-.container {
-  width: 100%;
-  max-width: 1230px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
 /* header */
-
-.header .container {
+.header-wrap {
   height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* banner */
+.brand__txt {
+  font-size: 36px;
+  font-weight: bold;
+  font-family: "Sansita Swashed", cursive;
+}
 
+/* banner */
 .banner {
   width: 100%;
   background-color: #f7f7f6;
@@ -49,30 +45,199 @@ li {
 }
 
 .banner__item {
-  flex: 1 0 50%;
+  flex: 0 0 50%;
   height: 400px;
 }
 
-.banner__bg1 {
-  background: url('./images/bg1.png') no-repeat center center;
+.banner_bg1 {
+  background: url("./images/bg1.png") no-repeat center center;
   background-size: cover;
 }
 
-.banner__bg2 {
-  background: url('./images/bg2.png') no-repeat center center;
-  background-size: cover;
+.banner_bg2 {
+  background: url("./images/bg2.png") no-repeat center center;
+}
+
+.banner__women {
+  background-color: #b5838d;
+}
+
+.banner__men {
+  background-color: #6d6875;
 }
 
 .banner__txt {
-  padding: 0 110px;
+  color: #fff;
+  text-align: center;
+  font-family: "Roboto", serif;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 111.59px;
 }
 
-/* best */
-.item__list img {
-  display: block;
+.banner__txt h2 {
+  font-size: 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.banner__txt p {
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: 63px;
+}
+
+/* list */
+.list {
+  background-color: #f7f7f6;
+  padding: 38px 0 80px;
+}
+
+.list__title {
+  font-family: "Roboto", serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: center;
+
+  margin-bottom: 39px;
+}
+
+.list__item {
+  font-family: "Poppins", serif;
+  margin-bottom: 39px;
+}
+
+.list__item img {
   width: 100%;
+  display: block;
 }
 
-/* new arrival */
+.list__item--name {
+  display: block;
+  margin: 15px 0 8px;
+}
+
+.list__item--content {
+  font-size: 14px;
+}
+
+.list__item--price {
+  font-weight: 500;
+  color: #b5838d;
+
+  display: block;
+  margin-top: 8px;
+}
+
+div[class^="list__btn"] {
+  margin-top: 17px;
+  text-align: center;
+}
+
+div[class^="list__btn"] button {
+  width: 155px;
+  height: 47px;
+  border-radius: 25px;
+
+  font-family: "Poppins";
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.arrival {
+  background-color: #fff;
+}
+
+.list__btn--best button {
+  background-color: #000;
+  color: #fff;
+}
+
+.list__btn--arrival button {
+  background-color: #fff;
+  color: #000;
+}
 
 /* footer */
+.footer {
+  background-color: #f7f7f6;
+}
+
+.footer-wrap {
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer__item {
+  flex: 0 0 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: #fff;
+  font-family: "Roboto", serif;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.footer__item:nth-child(1) {
+  background-color: #ffcdb2;
+}
+
+.footer__item:nth-child(2) {
+  background-color: #ffb4a2;
+}
+
+.footer__item:nth-child(3) {
+  background-color: #e5989b;
+}
+
+.footer__item--top {
+  width: 100%;
+  flex: 0 0 50%;
+  background-color: #6d6875;
+}
+
+.footer__item--bottom {
+  width: 100%;
+  flex: 0 0 50%;
+  background-color: #b4828c;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__item--top ul {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__item img {
+  width: 24px;
+  height: 24px;
+}
+
+@media screen and (max-width: 792px) {
+}
+
+@media screen and (max-width: 574px) {
+  .footer__item {
+    flex: 0 0 100%;
+    height: 100px;
+  }
+
+  .footer__item a,
+  footer__item--copyright {
+    font-size: 16px;
+  }
+}
